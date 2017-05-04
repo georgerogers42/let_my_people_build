@@ -1,0 +1,25 @@
+\starttext
+\setuppapersize[letter][letter]
+\setuphead[chapter][alternative=inmargin, textstyle=ss, numberstyle=bf, header=left]
+\setuphead[section][alternative=inmargin, textstyle=ss, numberstyle=bf]
+\setuppagenumbering[location=none]
+\startalign[center]
+{\switchtobodyfont[72pt] Let My People Build}
+\vskip 1in
+{\switchtobodyfont[48pt] George Rogers}
+\stopalign
+\pagebreak
+Copyright \copyright{} 2017 George Rogers
+
+All Rights Reserved.
+\pagebreak
+\setupfootertexts[chapter][]
+\setuppagenumbering[alternative=doublesided, location={text, footer, right}]
+\completecontent
+\startchapter[title={Let My People Build}]
+\stopchapter
+\startchapter[title={Urban Growth Boundaries}]
+\stopchapter
+\startchapter[title={Zoning}]
+\stopchapter
+\stoptext
