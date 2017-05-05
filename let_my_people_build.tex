@@ -4,9 +4,11 @@
 \setuphead[chapter][alternative=inmargin, textstyle=ss, numberstyle=bf, header=high]
 \setuphead[section][alternative=inmargin, textstyle=ss, numberstyle=bf]
 \setuphead[subsection][alternative=inmargin, textstyle=ss, numberstyle=bf]
+\startfrontmatter
 \setuppagenumbering[location=none]
 \startalign[center]
 {\switchtobodyfont[72pt] Let My People Build!}
+{\switchtobodyfont[48pt] A Manifesto}
 \vskip 1in
 {\switchtobodyfont[48pt] George Rogers}
 \stopalign
@@ -15,10 +17,14 @@ Copyright \copyright{} 2017 George Rogers
 
 All Rights Reserved.
 \pagebreak
-\setupfootertexts[chapter][]
-\setuppagenumbering[alternative=doublesided, location={text, footer, right}]
 \completecontent
+\stopfrontmatter
+\startbodymatter
+\setuppagenumbering[alternative=doublesided, location={text, footer, center}]
+\setupheadertexts[chapternumber][chapter]
+\setupfootertexts[sectionnumber][section]
 \input{chapter1}
 \input{chapter2}
 \input{chapter3}
+\stopbodymatter
 \stoptext
